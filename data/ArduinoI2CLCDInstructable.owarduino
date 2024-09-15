@@ -1,0 +1,101 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 464/>
+    <INSTANCE object Arduino: TArduinoBoard
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        __OpenWireRootUnit__.LiquidCrystalDisplay1.InputPin)
+    end\>
+  I2C.InputPin.Form = __OpenWireRootUnit__
+  I2C.InputPin.SourcePins = (
+    __OpenWireRootUnit__.LiquidCrystalDisplay1.OutputPin)
+  Digital.Items = <
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalI2CChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalI2CChannel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT LiquidCrystalDisplay1>
+    <X 256/>
+    <INSTANCE object LiquidCrystalDisplay1: TArduinoLiquidCrystalDisplayI2C
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePins = (
+    (
+      __OpenWireRootUnit__.Arduino.Serial._Item0.OutputPin
+      '__OpenWireRootUnit__.Arduino.Serial[0].OutputPin'))
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.Arduino.I2C.InputPin)
+end
+/>
+    <Y 1040/>
+  </COMPONENT>
+    <SELECTION LiquidCrystalDisplay1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>
